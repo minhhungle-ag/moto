@@ -1,28 +1,28 @@
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { alpha, Container, Stack } from "@mui/material";
-import AppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import * as React from "react";
-import { Link, NavLink } from "react-router-dom";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import { alpha, Container, Stack } from '@mui/material'
+import AppBar from '@mui/material/AppBar'
+import IconButton from '@mui/material/IconButton'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import * as React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 // import PropTypes from 'prop-types';
-Header.propTypes = {};
+Header.propTypes = {}
 
 const navList = [
   {
-    label: "HOME",
-    link: "/home",
+    label: 'HOME',
+    link: '/home',
   },
   {
-    label: "DIPLOMATIC TT",
-    link: "/diplomatic-it",
+    label: 'DIPLOMATIC TT',
+    link: '/diplomatic-it',
   },
   {
-    label: "COMPANY HISTORY",
-    link: "/company-history",
+    label: 'COMPANY HISTORY',
+    link: '/company-history',
   },
-];
+]
 
 function Header(props) {
   return (
@@ -32,12 +32,12 @@ function Header(props) {
           disableGutters
           sx={{
             py: 2,
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: 'column', sm: 'row' },
             color: (theme) => alpha(theme.palette.common.white, 0.7),
 
-            "& a": {
-              color: "inherit",
-              textDecoration: "none",
+            '& a': {
+              color: 'inherit',
+              textDecoration: 'none',
             },
           }}
         >
@@ -45,14 +45,14 @@ function Header(props) {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            sx={{ flexGrow: 1, width: { xs: "100%", sm: "auto" } }}
+            sx={{ flexGrow: 1, width: { xs: '100%', sm: 'auto' } }}
           >
             <Link to="/">
               <Typography
                 variant="h6"
                 component="div"
                 fontStyle="italic"
-                sx={{ flexGrow: 1, color: "white" }}
+                sx={{ flexGrow: 1, color: 'white' }}
               >
                 VINTAGE CHOPPERS.
               </Typography>
@@ -61,7 +61,7 @@ function Header(props) {
             <IconButton
               color="inherit"
               sx={{
-                display: { sm: "none" },
+                display: { sm: 'none' },
               }}
             >
               <ShoppingCartOutlinedIcon />
@@ -71,14 +71,15 @@ function Header(props) {
           <Stack
             direction="row"
             alignItems="center"
+            spacing={2}
             sx={{
-              width: { xs: "100%", sm: "auto" },
-              ".active div": {
-                color: "white",
+              width: { xs: '100%', sm: 'auto' },
+              '.active p': {
+                color: 'white',
               },
 
-              "& div:hover": {
-                color: "white",
+              '& p:hover': {
+                color: 'white',
               },
             }}
           >
@@ -86,15 +87,9 @@ function Header(props) {
               <NavLink
                 key={idx}
                 to={item.link}
-                className={({ isActive }) => (isActive ? "active" : "")}
+                className={({ isActive }) => (isActive ? 'active' : '')}
               >
-                <Typography
-                  component="div"
-                  sx={{
-                    p: 2,
-                    fontWeight: "bold",
-                  }}
-                >
+                <Typography component="p" variant="body2" fontWeight="bold" sx={{ py: 1 }}>
                   {item.label}
                 </Typography>
               </NavLink>
@@ -104,11 +99,11 @@ function Header(props) {
               color="inherit"
               sx={{
                 display: {
-                  xs: "none",
-                  sm: "flex",
+                  xs: 'none',
+                  sm: 'flex',
 
-                  "&:hover": {
-                    color: "white",
+                  '&:hover': {
+                    color: 'white',
                   },
                 },
               }}
@@ -119,7 +114,7 @@ function Header(props) {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+  )
 }
 
-export default Header;
+export default Header

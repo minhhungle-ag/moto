@@ -2,7 +2,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box, Stack } from "@mui/material";
+import { alpha, Box, Stack } from "@mui/material";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/layouts/Footer";
@@ -16,6 +16,7 @@ function App() {
       sx={{
         minHeight: "100vh",
         bgcolor: "primary.main",
+        color:theme=> alpha(theme.palette.common.white, 0.7)
       }}
     >
       <Header />
@@ -29,7 +30,8 @@ function App() {
       </Box>
 
       <Footer />
-    </Stack>
+    </Stack> 
+
   );
 }
 

@@ -1,7 +1,8 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Banner from "../../../components/common/Banner";
-import Company from "../components/Company";
+import React from 'react'
+import { Box } from '@mui/material'
+import Banner from '../../../components/common/Banner'
+import Company from '../components/Company'
+import MeetDiplomaticIt from '../components/MeetDiplomaticIt'
 
 function HomePage(props) {
   return (
@@ -13,8 +14,12 @@ function HomePage(props) {
       <Box>
         <Company />
       </Box>
+
+      <Box>
+        <MeetDiplomaticIt />
+      </Box>
     </Box>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
