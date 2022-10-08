@@ -1,38 +1,36 @@
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import { alpha, Box, Stack } from "@mui/material";
-import { Navigate, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Footer from "./components/layouts/Footer";
-import Header from "./components/layouts/Header";
-import DiplomaticIt from "./features/DiplomaticIt/DiplomaticIt";
-import HomePage from "./features/Home/page/HomePage";
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import { alpha, Box, Stack } from '@mui/material'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Footer from './components/layouts/Footer'
+import Header from './components/layouts/Header'
+import DiplomaticIt from './features/DiplomaticIt/pages/DiplomaticIt'
+
+import HomePage from './features/Home/page/HomePage'
 
 function App() {
   return (
-    <Stack
+    <Box
       sx={{
-        minHeight: "100vh",
-        bgcolor: "primary.main",
-        color:theme=> alpha(theme.palette.common.white, 0.7)
+        minHeight: '100vh',
+        bgcolor: '#202328',
+        color: (theme) => alpha(theme.palette.common.white, 0.7),
       }}
     >
       <Header />
 
-      <Box sx={{ flexGrow: 1 }}>
-        <Routes>
-          <Route index element={<Navigate to="/home" />} />
-          <Route path="home" element={<HomePage />} />
-          <Route path="diplomatic-it" element={<DiplomaticIt />} />
-        </Routes>
-      </Box>
+      <Routes>
+        <Route index element={<Navigate to="/home" />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="diplomatic-it" element={<DiplomaticIt />} />
+      </Routes>
 
       <Footer />
-    </Stack> 
-
-  );
+    </Box>
+  )
 }
 
-export default App;
+export default App

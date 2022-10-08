@@ -1,11 +1,10 @@
-import React from "react";
-// import PropTypes from "prop-types";
-import { Box } from "@mui/material";
+import React from 'react'
+import { Box } from '@mui/material'
 
 const THUMBNAIL_IMAGE =
-  "https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2021/06/home-hero-1.jpg";
+  'https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2021/06/home-hero-1.jpg'
 
-Banner.propTypes = {};
+Banner.propTypes = {}
 
 function Banner(props) {
   return (
@@ -13,13 +12,12 @@ function Banner(props) {
       sx={{
         height: 750,
         backgroundImage: `url(${THUMBNAIL_IMAGE})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "bottom",
-        // backgroundAttachment: "fixed",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
       }}
     />
-  );
+  )
 }
 
-export default Banner;
+export default Banner

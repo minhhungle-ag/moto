@@ -26,13 +26,13 @@ const navList = [
 
 function Header(props) {
   return (
-    <AppBar position="fixed">
+    <AppBar position="sticky" sx={{ bgcolor: '#202328' }}>
       <Container>
         <Toolbar
           disableGutters
           sx={{
-            py: 2,
             flexDirection: { xs: 'column', sm: 'row' },
+            py: 2,
             color: (theme) => alpha(theme.palette.common.white, 0.7),
 
             '& a': {
@@ -49,7 +49,7 @@ function Header(props) {
           >
             <Link to="/">
               <Typography
-                variant="h6"
+                variant="h4"
                 component="div"
                 fontStyle="italic"
                 sx={{ flexGrow: 1, color: 'white' }}
@@ -101,10 +101,13 @@ function Header(props) {
                 display: {
                   xs: 'none',
                   sm: 'flex',
+                },
 
-                  '&:hover': {
-                    color: 'white',
-                  },
+                p: 0.5,
+                ml: 0.5,
+
+                '&:hover': {
+                  color: 'white',
                 },
               }}
             >

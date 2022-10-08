@@ -1,6 +1,6 @@
+import { Box, Container, Stack, Typography } from '@mui/material'
 import React from 'react'
-// import PropTypes from "prop-types";
-import { Box, Container, Divider, Stack, Typography } from '@mui/material'
+import Title from '../../../components/common/Title'
 
 Company.propTypes = {}
 
@@ -12,12 +12,10 @@ function Company(props) {
       }}
     >
       <Container>
-        <Stack direction="row" flexWrap="wrap" sx={{ mx: -1 }}>
+        <Stack direction="row" flexWrap="wrap" sx={{ mx: -2 }}>
           <Box sx={{ width: { xs: '100%', md: 1 / 3 } }}>
-            <Stack spacing={2} sx={{ p: 1 }}>
-              <Typography variant="h3">THE COMPANY</Typography>
-
-              <Divider color="white" sx={{ height: '2px' }} />
+            <Stack spacing={2} sx={{ p: 2 }}>
+              <Title title="THE COMPANY" justifyContent="flex-start" />
 
               <Typography variant="body2">
                 Nulla facilisi. Maecenas venenatis metus leo, ac mollis nisi mattis ut. Nunc sed
@@ -36,23 +34,39 @@ function Company(props) {
           </Box>
 
           <Box sx={{ width: { xs: '100%', md: 2 / 3 } }}>
-            <Stack direction="row" flexWrap="wrap" sx={{ p: 1, mx: -1 }}>
-              <Box sx={{ width: { xs: '100%', md: 1 / 2 }, p: 1 }}>
-                <Box
-                  width="100%"
-                  component="img"
-                  alt=""
-                  src="https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2021/05/production.jpg"
-                />
+            <Stack direction="row" flexWrap="wrap" sx={{ p: 2, mx: -2 }}>
+              <Box
+                sx={{
+                  width: { xs: '100%', sm: 1 / 2 },
+                  p: 2,
+                }}
+              >
+                <Box boxShadow={3}>
+                  <Box
+                    width="100%"
+                    component="img"
+                    sx={{ verticalAlign: 'middle' }}
+                    alt=""
+                    src="https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2021/05/production.jpg"
+                  />
+                </Box>
               </Box>
 
-              <Box sx={{ width: { xs: '100%', md: 1 / 2 }, p: 1 }}>
-                <Box
-                  width="100%"
-                  component="img"
-                  alt=""
-                  src="https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2020/11/7.jpg"
-                />
+              <Box
+                sx={{
+                  width: { xs: '100%', sm: 1 / 2 },
+                  p: 2,
+                }}
+              >
+                <Box boxShadow={3}>
+                  <Box
+                    sx={{ verticalAlign: 'middle' }}
+                    width="100%"
+                    component="img"
+                    alt=""
+                    src="https://demo.tagdiv.com/newspaper_shop_vintage_choppers_store/wp-content/uploads/2020/11/7.jpg"
+                  />
+                </Box>
               </Box>
             </Stack>
           </Box>
